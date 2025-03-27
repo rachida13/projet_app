@@ -1,4 +1,5 @@
 import 'package:exam_app/home_pages/Sign_log_page.dart';
+import 'package:exam_app/home_pages/edit_profile.dart';
 import 'package:exam_app/home_pages/first_page.dart';
 import 'package:exam_app/home_pages/settings_screen.dart';
 import 'package:exam_app/home_pages/splach_screen.dart';
@@ -63,6 +64,7 @@ class MyApp extends StatelessWidget {
           '/profilpage': (context) => ProfilPage(),
           '/usertype': (context) => UserType(),
           '/settingsscreen': (context) => SettingsScreen(),
+          '/editprofile': (context) => EditProfile(),
         });
   }
 }
