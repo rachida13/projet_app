@@ -102,7 +102,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ),
                   ),
                   trailing: Icon(Icons.arrow_forward_ios, size: 16),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/editprofile');
+                  },
                 ),
                 ListTile(
                   title: Text(
