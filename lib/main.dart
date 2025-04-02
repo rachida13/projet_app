@@ -1,9 +1,12 @@
 import 'package:exam_app/home_pages/Sign_log_page.dart';
+import 'package:exam_app/home_pages/about_us.dart';
 import 'package:exam_app/home_pages/edit_icon.dart';
 import 'package:exam_app/home_pages/edit_profile.dart';
 import 'package:exam_app/home_pages/first_page.dart';
+import 'package:exam_app/home_pages/selectionne_avatr.dart';
 import 'package:exam_app/home_pages/settings_screen.dart';
 import 'package:exam_app/home_pages/splach_screen.dart';
+import 'package:exam_app/home_pages/terms_and_conditions.dart';
 import 'package:exam_app/home_pages/user_type.dart';
 import 'package:flutter/material.dart';
 
@@ -67,6 +70,9 @@ class MyApp extends StatelessWidget {
           '/settingsscreen': (context) => SettingsScreen(),
           '/editprofile': (context) => EditProfile(),
           '/editicon': (context) => EditIcon(),
+          '/selectionneavatr': (context) => SelectionneAvatr(),
+          '/aboutus': (context) => AboutUs(),
+          '/termsandconditions': (context) => TermsAndConditions(),
         });
   }
 }

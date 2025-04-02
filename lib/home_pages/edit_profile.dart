@@ -1,64 +1,25 @@
-import 'package:exam_app/home_pages/edit_icon.dart';
 import 'package:flutter/material.dart';
+import 'selectionne_avatr.dart';
 
-/*class EditProfile extends StatelessWidget {
+class EditProfile extends StatefulWidget {
   const EditProfile({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Column(
-          children: [
-            Positioned(
-              child: Text(
-                "Edit Profile",
-                style: TextStyle(fontSize: 24),
-              ),
-            ),
-          ],
-        ),
-      ),
-      body: Container(
-          child: Column(
-        children: [
-          Text(
-            "Edit Profile",
-            style: TextStyle(fontSize: 24),
-          ),
-        ],
-      )),
-    );
-  }
-}*/
-/*
-class EditProfile extends StatefulWidget {
   @override
   _EditProfileState createState() => _EditProfileState();
 }
 
 class _EditProfileState extends State<EditProfile> {
-  TextEditingController fullNameController =
-      TextEditingController(text: "Puerto Rico");
-  TextEditingController nickNameController =
-      TextEditingController(text: "puerto_rico");
-  TextEditingController emailController =
-      TextEditingController(text: "youremail@domain.com");
-  TextEditingController phoneController =
-      TextEditingController(text: "123-456-7890");
-*/
-class EditProfile extends StatelessWidget {
-  const EditProfile({super.key});
+  String? selectedAvatarPath; // Avatar sélectionné
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.pop(context),
         ),
-        title: Text("Edit Profile"),
+        title: const Text("Edit Profile"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -70,16 +31,29 @@ class EditProfile extends StatelessWidget {
               Stack(
                 alignment: Alignment.bottomRight,
                 children: [
-                  const CircleAvatar(
+                  CircleAvatar(
                     radius: 50,
-                    backgroundImage: AssetImage('images/photo6.jpeg'),
+                    backgroundImage: selectedAvatarPath != null
+                        ? AssetImage(selectedAvatarPath!) as ImageProvider
+                        : const AssetImage('images/photo6.jpeg'),
                   ),
                   Positioned(
                     bottom: 0,
                     right: 0,
                     child: GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).pushNamed('/editicon');
+                      onTap: () async {
+                        final selectedAvatar = await Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => SelectionneAvatr(),
+                          ),
+                        );
+
+                        if (selectedAvatar != null) {
+                          setState(() {
+                            selectedAvatarPath = selectedAvatar;
+                          });
+                        }
                       },
                       child: Container(
                         padding: const EdgeInsets.all(4),
@@ -95,64 +69,19 @@ class EditProfile extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 10),
-              Text("user name",
+              const SizedBox(height: 10),
+              const Text("User Name",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
 
-              SizedBox(height: 20),
-              TextField(
-                  decoration: InputDecoration(
-                labelText: 'Full Name',
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey, width: 2.0),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey, width: 2.5),
-                ),
-                filled: true,
-                fillColor: Colors.white.withOpacity(0.5),
-              )),
-              SizedBox(height: 20),
-              TextField(
-                  decoration: InputDecoration(
-                labelText: 'Nick Name',
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey, width: 2.0),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey, width: 2.5),
-                ),
-                filled: true,
-                fillColor: Colors.white.withOpacity(0.5),
-              )),
-              SizedBox(height: 20),
-              TextField(
-                  decoration: InputDecoration(
-                labelText: 'Email',
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey, width: 2.0),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey, width: 2.5),
-                ),
-                filled: true,
-                fillColor: Colors.white.withOpacity(0.5),
-              )),
-              SizedBox(height: 20),
-              TextField(
-                  decoration: InputDecoration(
-                labelText: 'Phone Number',
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey, width: 2.0),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.grey, width: 2.5),
-                ),
-                filled: true,
-                fillColor: Colors.white.withOpacity(0.5),
-              )),
-
-              SizedBox(height: 40),
+              const SizedBox(height: 20),
+              _buildTextField("Full Name"),
+              const SizedBox(height: 20),
+              _buildTextField("Nick Name"),
+              const SizedBox(height: 20),
+              _buildTextField("Email"),
+              const SizedBox(height: 20),
+              _buildTextField("Phone Number"),
+              const SizedBox(height: 40),
 
               // Bouton Submit
               SizedBox(
@@ -163,15 +92,32 @@ class EditProfile extends StatelessWidget {
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
-                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 50, vertical: 15),
                   ),
-                  child: Text("SUBMIT",
+                  child: const Text("SUBMIT",
                       style: TextStyle(color: Colors.white, fontSize: 18)),
                 ),
               ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildTextField(String label) {
+    return TextField(
+      decoration: InputDecoration(
+        labelText: label,
+        enabledBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: Colors.grey, width: 2.0),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderSide: const BorderSide(color: Colors.grey, width: 2.5),
+        ),
+        filled: true,
+        fillColor: Colors.white.withOpacity(0.5),
       ),
     );
   }

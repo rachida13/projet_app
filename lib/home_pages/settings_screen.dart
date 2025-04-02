@@ -1,3 +1,5 @@
+import 'package:exam_app/home_pages/about_us.dart';
+import 'package:exam_app/home_pages/terms_and_conditions.dart';
 import 'package:flutter/material.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -95,6 +97,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                 ),
                 ListTile(
+                  leading: Icon(Icons.person),
                   title: Text(
                     'Edit profile',
                     style: TextStyle(
@@ -107,8 +110,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   },
                 ),
                 ListTile(
+                  leading: Icon(Icons.lock),
                   title: Text(
-                    'Change password',
+                    'Privacy',
                     style: TextStyle(
                       color: darkMode ? Colors.white : Colors.black,
                     ),
@@ -179,21 +183,26 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ),
                   ),
                   trailing: Icon(Icons.arrow_forward_ios, size: 16),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/aboutus');
+                  },
                 ),
                 ListTile(
                   title: Text(
-                    'Privacy policy',
+                    'Terms and conditions',
                     style: TextStyle(
                       color: darkMode ? Colors.white : Colors.black,
                     ),
                   ),
                   trailing: Icon(Icons.arrow_forward_ios, size: 16),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/termsandconditions');
+                  },
                 ),
                 ListTile(
+                  leading: Icon(Icons.logout),
                   title: Text(
-                    'Terms and conditions',
+                    'log out',
                     style: TextStyle(
                       color: darkMode ? Colors.white : Colors.black,
                     ),
