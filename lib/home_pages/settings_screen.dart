@@ -1,6 +1,8 @@
 import 'package:exam_app/home_pages/about_us.dart';
 import 'package:exam_app/home_pages/terms_and_conditions.dart';
 import 'package:flutter/material.dart';
+import 'package:exam_app/home_pages/change_password_page.dart';
+import 'package:exam_app/home_pages/edit_profile.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -118,7 +120,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ),
                   ),
                   trailing: Icon(Icons.arrow_forward_ios, size: 16),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/changepasswordpage');
+                  },
                 ),
                 SwitchListTile(
                   title: Text(
@@ -208,7 +212,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ),
                   ),
                   trailing: Icon(Icons.arrow_forward_ios, size: 16),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/signlogpage');
+                  },
                 ),
               ],
             ),

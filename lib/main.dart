@@ -1,5 +1,6 @@
 import 'package:exam_app/home_pages/Sign_log_page.dart';
 import 'package:exam_app/home_pages/about_us.dart';
+import 'package:exam_app/home_pages/change_password_page.dart';
 import 'package:exam_app/home_pages/edit_icon.dart';
 import 'package:exam_app/home_pages/edit_profile.dart';
 import 'package:exam_app/home_pages/first_page.dart';
@@ -73,6 +74,7 @@ class MyApp extends StatelessWidget {
           '/selectionneavatr': (context) => SelectionneAvatr(),
           '/aboutus': (context) => AboutUs(),
           '/termsandconditions': (context) => TermsAndConditions(),
+          '/changepasswordpage': (context) => ChangePasswordPage(),
         });
   }
 }
