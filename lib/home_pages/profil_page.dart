@@ -159,7 +159,7 @@ class ProfilPage extends StatelessWidget {
                     height: 45,
                     child: ElevatedButton(
                         onPressed: () {
-                          Navigator.of(context).pushNamed('/usertype');
+                          Navigator.of(context).pushNamed('/selectusertype');
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
                                 content: Text("Insecription with succees")),
@@ -177,6 +177,7 @@ class ProfilPage extends StatelessWidget {
                   SizedBox(
                     height: 20,
                   ),
+                  /*
                   SizedBox(
                     width: 220,
                     height: 45,
@@ -192,7 +193,7 @@ class ProfilPage extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 18,
                             ))),
-                  ),
+                  ),*/
                 ],
               ),
             ),

@@ -69,7 +69,10 @@ class LogIn extends StatelessWidget {
                   Align(
                     alignment: Alignment.centerRight,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context)
+                            .pushReplacementNamed('/forgotpassword');
+                      },
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.blue,
                       ),

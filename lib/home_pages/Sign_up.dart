@@ -174,7 +174,8 @@ class SignUp extends StatelessWidget {
                           ),
                           TextButton(
                             onPressed: () {
-                              Navigator.of(context).pushNamed('/login');
+                             Navigator.of(context).pushNamed('/login');
+                             
                             },
                             style: TextButton.styleFrom(
                                 foregroundColor: Colors.blue),

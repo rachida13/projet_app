@@ -46,7 +46,7 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Confidentialité'),
+        title: const Text('Privacy'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

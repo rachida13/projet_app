@@ -28,11 +28,9 @@ class SignLogPage extends StatelessWidget {
               color: Colors.blue,
             ),
           ),
-          SizedBox(
-            height: 35,
-          ),
+          SizedBox(),
           Image.asset(
-            'images/photo2.jpeg',
+            'images/hello.jpeg',
             height: 430,
             width: double.infinity,
           ),
@@ -65,8 +63,10 @@ class SignLogPage extends StatelessWidget {
             height: 45,
             child: ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).pushNamed('/login');
+                   Navigator.of(context).pushNamed('/login');
+                 
                 },
+
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.blue,
                   backgroundColor: Colors.white,
