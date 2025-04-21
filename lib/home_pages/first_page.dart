@@ -1,9 +1,9 @@
-import 'package:exam_app/home_pages/first_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+// ignore: use_key_in_widget_constructors
 class FirstPage extends StatefulWidget {
   @override
+  // ignore: library_private_types_in_public_api
   _FirstPageState createState() => _FirstPageState();
 }
 
@@ -15,6 +15,7 @@ class _FirstPageState extends State<FirstPage> {
     return Scaffold(
       body: Column(
         children: [
+          // ignore: prefer_const_constructors
           SizedBox(height: 100),
           ClipRRect(
             borderRadius: BorderRadius.circular(200),
@@ -33,7 +34,9 @@ class _FirstPageState extends State<FirstPage> {
                   _showArrow = true;
                 });
 
+                // ignore: prefer_const_constructors
                 Future.delayed(Duration(milliseconds: 500), () {
+                  // ignore: use_build_context_synchronously
                   Navigator.of(context).pushReplacementNamed('/signlog');
                 });
               },
@@ -43,12 +46,16 @@ class _FirstPageState extends State<FirstPage> {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  // ignore: prefer_const_constructors
                   Text(
                     'Continue',
+                    // ignore: prefer_const_constructors
                     style: TextStyle(fontSize: 25),
                   ),
+                  // ignore: prefer_const_constructors
                   SizedBox(width: 8),
                   if (_showArrow)
+                    // ignore: prefer_const_constructors
                     Icon(
                       Icons.arrow_forward,
                       color: Colors.blue,

@@ -5,13 +5,15 @@ class EditIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: prefer_const_constructors
     return Scaffold(
-      body: Container(
-        child: Column(
-          children: [
-            Text('you avatar'),
-          ],
-        ),
+      // ignore: prefer_const_constructors
+      body: Column(
+        // ignore: prefer_const_literals_to_create_immutables
+        children: [
+          // ignore: prefer_const_constructors
+          Text('you avatar'),
+        ],
       ),
     );
   }

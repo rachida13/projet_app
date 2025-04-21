@@ -30,6 +30,7 @@ class InputModeSelectionScreen extends StatelessWidget {
                   imagePath: "images/photo.png",
                   buttonText: "Speak",
                   color: Colors.green,
+                  // ignore: avoid_print
                   onPressed: () => print("Speak Mode Selected"),
                 ),
                 const SizedBox(width: 20),
@@ -37,6 +38,7 @@ class InputModeSelectionScreen extends StatelessWidget {
                   imagePath: "images/photo2.webp",
                   buttonText: "Text",
                   color: Colors.blue,
+                  // ignore: avoid_print
                   onPressed: () => print("Text Mode Selected"),
                 ),
               ],

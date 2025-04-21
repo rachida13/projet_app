@@ -1,7 +1,10 @@
-import 'package:flutter/cupertino.dart';
+// ignore: duplicate_ignore
+// ignore: file_names, duplicate_ignore
+// ignore: file_names, duplicate_ignore
+// ignore: file_names
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:exam_app/home_pages/Log_in.dart';
-import 'package:exam_app/home_pages/Sign_up.dart';
 
 class SignLogPage extends StatelessWidget {
   const SignLogPage({super.key});
@@ -16,11 +19,14 @@ class SignLogPage extends StatelessWidget {
       color: Colors.white,
       child: Column(
         children: [
+          // ignore: prefer_const_constructors
           SizedBox(
             height: 120,
           ),
+          // ignore: prefer_const_constructors
           Text(
             'Welcome!',
+            // ignore: prefer_const_constructors
             style: TextStyle(
               fontFamily: 'Poppins',
               fontSize: 35,
@@ -28,12 +34,14 @@ class SignLogPage extends StatelessWidget {
               color: Colors.blue,
             ),
           ),
+          // ignore: prefer_const_constructors
           SizedBox(),
           Image.asset(
             'images/hello.jpeg',
             height: 430,
             width: double.infinity,
           ),
+          // ignore: prefer_const_constructors
           SizedBox(
             height: 35,
           ),
@@ -42,19 +50,23 @@ class SignLogPage extends StatelessWidget {
             height: 45,
             child: ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).pushNamed('/signup');
+                  // Navigator.of(context).pushNamed('/signup');
+                  Navigator.of(context).pushNamed('/ AlphabetPage');
                 },
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
                   backgroundColor: Colors.blue,
                 ),
+                // ignore: prefer_const_constructors
                 child: Text(
                   'Sign up',
+                  // ignore: prefer_const_constructors
                   style: TextStyle(
                     fontSize: 25,
                   ),
                 )),
           ),
+          // ignore: prefer_const_constructors
           SizedBox(
             height: 25,
           ),
@@ -63,15 +75,15 @@ class SignLogPage extends StatelessWidget {
             height: 45,
             child: ElevatedButton(
                 onPressed: () {
-                   Navigator.of(context).pushNamed('/login');
-                 
+                  Navigator.of(context).pushNamed('/login');
                 },
-
                 style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.blue,
                   backgroundColor: Colors.white,
                 ),
+                // ignore: prefer_const_constructors
                 child: Text('Login',
+                    // ignore: prefer_const_constructors
                     style: TextStyle(
                       fontSize: 25,
                     ))),

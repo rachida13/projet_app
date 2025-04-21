@@ -1,3 +1,7 @@
+// ignore: duplicate_ignore
+// ignore: file_names
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class ProfilPage extends StatelessWidget {
@@ -26,8 +30,11 @@ class ProfilPage extends StatelessWidget {
             onPressed: () {},
           ),
         ],*/
+        // ignore: prefer_const_constructors
         shape: RoundedRectangleBorder(
+          // ignore: prefer_const_constructors
           borderRadius: BorderRadius.vertical(
+            // ignore: prefer_const_constructors
             bottom: Radius.circular(30),
           ),
         ),
@@ -42,13 +49,16 @@ class ProfilPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     IconButton(
+                      // ignore: prefer_const_constructors
                       icon: Icon(Icons.arrow_back, color: Colors.white),
                       onPressed: () {
                         Navigator.of(context).pushNamed('/signlogpage');
                       },
                     ),
+                    // ignore: prefer_const_constructors
                     Text(
                       'Profile',
+                      // ignore: prefer_const_constructors
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 22,
@@ -56,6 +66,7 @@ class ProfilPage extends StatelessWidget {
                       ),
                     ),
                     IconButton(
+                      // ignore: prefer_const_constructors
                       icon: Icon(Icons.settings, color: Colors.white),
                       onPressed: () {
                         Navigator.of(context)
@@ -68,27 +79,38 @@ class ProfilPage extends StatelessWidget {
                   ],
                 ),
               ),
+              // ignore: prefer_const_constructors
               Positioned(
                 bottom: 65,
                 left: 0,
                 right: 0,
+                // ignore: prefer_const_constructors
                 child: Center(
+                  // ignore: prefer_const_constructors
                   child: CircleAvatar(
                     radius: 45,
+                    // ignore: prefer_const_constructors
                     backgroundImage: AssetImage('images/photo6.jpeg'),
                   ),
                 ),
               ),
+              // ignore: prefer_const_constructors
               Positioned(
                 bottom: 25,
                 left: 160,
                 right: 0,
+                // ignore: prefer_const_constructors
                 child: Center(
+                    // ignore: prefer_const_constructors
                     child: Row(
+                  // ignore: prefer_const_literals_to_create_immutables
                   children: [
+                    // ignore: prefer_const_constructors
                     Center(
+                      // ignore: prefer_const_constructors
                       child: Text(
                         'User name ',
+                        // ignore: prefer_const_constructors
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.white,
@@ -108,10 +130,13 @@ class ProfilPage extends StatelessWidget {
           child: SizedBox(
             height: MediaQuery.of(context).size.height,
             child: Padding(
+              // ignore: prefer_const_constructors
               padding: EdgeInsets.all(20),
               child: Column(
                 children: [
+                  // ignore: prefer_const_constructors
                   TextField(
+                    // ignore: prefer_const_constructors
                     decoration: InputDecoration(
                       hintText: 'First Name',
                       /* border: OutlineInputBorder(),
@@ -119,38 +144,51 @@ class ProfilPage extends StatelessWidget {
                           vertical: 20.0, horizontal: 12.0),*/ //pour faire cadre textfield
                     ),
                   ),
+                  // ignore: prefer_const_constructors
                   SizedBox(
                     height: 20,
                   ),
+                  // ignore: prefer_const_constructors
                   TextField(
+                    // ignore: prefer_const_constructors
                     decoration: InputDecoration(
                       hintText: 'FLast Name',
                     ),
                   ),
+                  // ignore: prefer_const_constructors
                   SizedBox(
                     height: 20,
                   ),
+                  // ignore: prefer_const_constructors
                   TextField(
+                    // ignore: prefer_const_constructors
                     decoration: InputDecoration(
                       hintText: 'Email',
                     ),
                   ),
+                  // ignore: prefer_const_constructors
                   SizedBox(
                     height: 20,
                   ),
+                  // ignore: prefer_const_constructors
                   TextField(
+                    // ignore: prefer_const_constructors
                     decoration: InputDecoration(
                       hintText: 'Phone Number',
                     ),
                   ),
+                  // ignore: prefer_const_constructors
                   SizedBox(
                     height: 20,
                   ),
+                  // ignore: prefer_const_constructors
                   TextField(
+                    // ignore: prefer_const_constructors
                     decoration: InputDecoration(
                       hintText: 'City',
                     ),
                   ),
+                  // ignore: prefer_const_constructors
                   SizedBox(
                     height: 50,
                   ),
@@ -169,11 +207,14 @@ class ProfilPage extends StatelessWidget {
                           foregroundColor: Colors.white,
                           backgroundColor: Colors.blue,
                         ),
+                        // ignore: prefer_const_constructors
                         child: Text('Create ',
+                            // ignore: prefer_const_constructors
                             style: TextStyle(
                               fontSize: 18,
                             ))),
                   ),
+                  // ignore: prefer_const_constructors
                   SizedBox(
                     height: 20,
                   ),

@@ -5,6 +5,7 @@ class EditProfile extends StatefulWidget {
   const EditProfile({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _EditProfileState createState() => _EditProfileState();
 }
 
@@ -110,9 +111,11 @@ class _EditProfileState extends State<EditProfile> {
     return TextField(
       decoration: InputDecoration(
         labelText: label,
+        // ignore: prefer_const_constructors
         enabledBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: Colors.grey, width: 2.0),
         ),
+        // ignore: prefer_const_constructors
         focusedBorder: OutlineInputBorder(
           borderSide: const BorderSide(color: Colors.grey, width: 2.5),
         ),

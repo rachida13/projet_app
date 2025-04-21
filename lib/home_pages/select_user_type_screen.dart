@@ -1,8 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
+// ignore: use_key_in_widget_constructors
 class SelectUserTypeScreen extends StatefulWidget {
   @override
+  // ignore: library_private_types_in_public_api
   _SelectUserTypeScreenState createState() => _SelectUserTypeScreenState();
 }
 
@@ -20,7 +22,6 @@ class _SelectUserTypeScreenState extends State<SelectUserTypeScreen> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,6 +35,7 @@ class _SelectUserTypeScreenState extends State<SelectUserTypeScreen> {
             colors: isFirstColor
                 ? [
                     const Color.fromARGB(255, 6, 26, 207),
+                    // ignore: prefer_const_constructors
                     Color.fromRGBO(255, 255, 255, 1),
                   ]
                 : [
@@ -66,6 +68,7 @@ class _SelectUserTypeScreenState extends State<SelectUserTypeScreen> {
 
             const SizedBox(height: 20),
 
+            // ignore: prefer_const_constructors
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
@@ -129,6 +132,7 @@ class UserOptionCard extends StatelessWidget {
   final bool isSelected;
   final VoidCallback onTap;
 
+  // ignore: use_key_in_widget_constructors
   const UserOptionCard({
     required this.title,
     required this.image,

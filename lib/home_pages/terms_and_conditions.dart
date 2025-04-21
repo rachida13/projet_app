@@ -31,12 +31,15 @@ class TermsAndConditions extends StatelessWidget {
               icon: const Icon(Icons.arrow_back),
               onPressed: () => Navigator.pop(context),
             ),
+            // ignore: prefer_const_constructors
             title: Text(
               'Terms And Conditions  ',
+              // ignore: prefer_const_constructors
               style: TextStyle(fontSize: 28),
             )),
         body: SingleChildScrollView(
           child: Padding(
+            // ignore: prefer_const_constructors
             padding: EdgeInsets.all(20.00),
             child: Column(
               children: [
@@ -44,6 +47,7 @@ class TermsAndConditions extends StatelessWidget {
                   color: Colors.black,
                   child: Text(
                     termsAndConditionsText,
+                    // ignore: prefer_const_constructors
                     style: TextStyle(fontSize: 20),
                   ),
                 )

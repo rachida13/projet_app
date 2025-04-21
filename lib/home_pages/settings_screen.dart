@@ -1,8 +1,4 @@
-import 'package:exam_app/home_pages/about_us.dart';
-import 'package:exam_app/home_pages/terms_and_conditions.dart';
 import 'package:flutter/material.dart';
-import 'package:exam_app/home_pages/change_password_page.dart';
-import 'package:exam_app/home_pages/edit_profile.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -24,16 +20,24 @@ class _SettingsScreenState extends State<SettingsScreen> {
         children: [
           // HEADER
           Container(
+            // ignore: prefer_const_constructors
             color: Color(0xFF1664F3),
+            // ignore: prefer_const_constructors
             padding: EdgeInsets.only(top: 40, left: 16, right: 16, bottom: 20),
             child: Row(
               children: [
+                // ignore: prefer_const_constructors
                 Row(
+                  // ignore: prefer_const_literals_to_create_immutables
                   children: [
+                    // ignore: prefer_const_constructors
                     Icon(Icons.settings, color: Colors.white, size: 40),
+                    // ignore: prefer_const_constructors
                     SizedBox(width: 8),
+                    // ignore: prefer_const_constructors
                     Text(
                       'Settings',
+                      // ignore: prefer_const_constructors
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 24,
@@ -46,6 +50,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 GestureDetector(
                   onTap: () {},
                   child: IconButton(
+                    // ignore: prefer_const_constructors
                     icon: Icon(Icons.arrow_back, color: Colors.white, size: 24),
                     onPressed: () {
                       Navigator.of(context).pushNamed('/profilpage');
@@ -58,15 +63,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
           // PROFILE
           Container(
+            // ignore: prefer_const_constructors
             padding: EdgeInsets.symmetric(vertical: 16),
             color: darkMode ? Colors.black : Colors.white,
             child: Column(
               children: [
+                // ignore: prefer_const_constructors
                 CircleAvatar(
                   radius: 35,
+                  // ignore: prefer_const_constructors
                   backgroundImage: AssetImage(
                       'images/photo6.jpeg'), // replace with your avatar
                 ),
+                // ignore: prefer_const_constructors
                 SizedBox(height: 8),
                 Text(
                   'Mon Nom',
@@ -81,6 +90,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           Container(
             height: 0.25,
             color: Colors.grey,
+            // ignore: prefer_const_constructors
             margin: EdgeInsets.only(top: 16, bottom: 8),
           ),
           // SETTINGS OPTIONS
@@ -88,10 +98,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
             child: ListView(
               children: [
                 // Account Settings
+                // ignore: prefer_const_constructors
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16, 8, 0, 4),
+                  // ignore: prefer_const_constructors
                   child: Text(
                     'Account Settings',
+                    // ignore: prefer_const_constructors
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 14,
@@ -99,6 +112,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   ),
                 ),
                 ListTile(
+                  // ignore: prefer_const_constructors
                   leading: Icon(Icons.person),
                   title: Text(
                     'Edit profile',
@@ -106,12 +120,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       color: darkMode ? Colors.white : Colors.black,
                     ),
                   ),
+                  // ignore: prefer_const_constructors
                   trailing: Icon(Icons.arrow_forward_ios, size: 16),
                   onTap: () {
                     Navigator.of(context).pushNamed('/editprofile');
                   },
                 ),
                 ListTile(
+                  // ignore: prefer_const_constructors
                   leading: Icon(Icons.lock),
                   title: Text(
                     'Privacy',
@@ -119,6 +135,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       color: darkMode ? Colors.white : Colors.black,
                     ),
                   ),
+                  // ignore: prefer_const_constructors
                   trailing: Icon(Icons.arrow_forward_ios, size: 16),
                   onTap: () {
                     Navigator.of(context).pushNamed('/changepasswordpage');
@@ -137,6 +154,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       pushNotifications = value;
                     });
                   },
+                  // ignore: prefer_const_constructors
                   activeColor: Color(0xFF1664F3),
                 ),
                 SwitchListTile(
@@ -161,18 +179,23 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       darkMode = value;
                     });
                   },
+                  // ignore: prefer_const_constructors
                   activeColor: Color(0xFF1664F3),
                 ),
                 Container(
                   height: 0.25,
                   color: Colors.grey,
+                  // ignore: prefer_const_constructors
                   margin: EdgeInsets.only(top: 16, bottom: 8),
                 ),
                 // More
+                // ignore: prefer_const_constructors
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16, 16, 0, 4),
+                  // ignore: prefer_const_constructors
                   child: Text(
                     'More',
+                    // ignore: prefer_const_constructors
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 14,
@@ -186,6 +209,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       color: darkMode ? Colors.white : Colors.black,
                     ),
                   ),
+                  // ignore: prefer_const_constructors
                   trailing: Icon(Icons.arrow_forward_ios, size: 16),
                   onTap: () {
                     Navigator.of(context).pushNamed('/aboutus');
@@ -198,12 +222,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       color: darkMode ? Colors.white : Colors.black,
                     ),
                   ),
+                  // ignore: prefer_const_constructors
                   trailing: Icon(Icons.arrow_forward_ios, size: 16),
                   onTap: () {
                     Navigator.of(context).pushNamed('/termsandconditions');
                   },
                 ),
                 ListTile(
+                  // ignore: prefer_const_constructors
                   leading: Icon(Icons.logout),
                   title: Text(
                     'log out',
@@ -211,6 +237,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       color: darkMode ? Colors.white : Colors.black,
                     ),
                   ),
+                  // ignore: prefer_const_constructors
                   trailing: Icon(Icons.arrow_forward_ios, size: 16),
                   onTap: () {
                     Navigator.of(context).pushNamed('/signlogpage');

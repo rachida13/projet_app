@@ -1,8 +1,10 @@
 import 'package:exam_app/components/my_custom_clipper.dart';
 import 'package:flutter/material.dart';
 
+// ignore: use_key_in_widget_constructors
 class SplashScreen extends StatefulWidget {
   @override
+  // ignore: library_private_types_in_public_api
   _SplashScreenState createState() => _SplashScreenState();
 }
 
@@ -18,6 +20,7 @@ class _SplashScreenState extends State<SplashScreen>
 
     _controller = AnimationController(
       vsync: this,
+      // ignore: prefer_const_constructors
       duration: Duration(seconds: 2),
     );
 
@@ -27,13 +30,16 @@ class _SplashScreenState extends State<SplashScreen>
     );
 
     _slideAnimation = Tween<Offset>(
+      // ignore: prefer_const_constructors
       begin: Offset(0.0, 1.0),
       end: Offset.zero,
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOut));
 
     _controller.forward();
 
+    // ignore: prefer_const_constructors
     Future.delayed(Duration(seconds: 3), () {
+      // ignore: use_build_context_synchronously
       Navigator.of(context).pushReplacementNamed('/firstpage');
     });
   }

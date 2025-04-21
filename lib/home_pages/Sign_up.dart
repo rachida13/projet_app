@@ -1,7 +1,10 @@
-import 'package:flutter/cupertino.dart';
+// ignore: duplicate_ignore
+// ignore: file_names, duplicate_ignore
+// ignore: file_names, duplicate_ignore
+// ignore: file_names
+// ignore_for_file: prefer_const_constructors, file_names
+
 import 'package:flutter/material.dart';
-import 'package:exam_app/home_pages/Profil_page.dart';
-import 'package:exam_app/home_pages/Log_in.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
@@ -22,12 +25,16 @@ class SignUp extends StatelessWidget {
             child: SizedBox(
               height: MediaQuery.of(context).size.height,
               child: Padding(
+                // ignore: duplicate_ignore
+                // ignore: prefer_const_constructors
                 padding: EdgeInsets.all(20),
                 child: Column(
                   children: [
                     SizedBox(
                       height: 30,
                     ),
+                    // ignore: duplicate_ignore
+                    // ignore: prefer_const_constructors
                     Text(
                       'Create account',
                       style: TextStyle(
@@ -37,79 +44,137 @@ class SignUp extends StatelessWidget {
                         color: Colors.blue,
                       ),
                     ),
+                    // ignore: duplicate_ignore
+                    // ignore: prefer_const_constructors
                     SizedBox(
                       height: 10,
                     ),
+                    // ignore: duplicate_ignore
+                    // ignore: prefer_const_constructors
                     Text(
                       'Enter your Personal Data',
+                      // ignore: duplicate_ignore
+                      // ignore: prefer_const_constructors
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.normal,
                         color: Colors.blue,
                       ),
                     ),
+                    // ignore: duplicate_ignore
+                    // ignore: prefer_const_constructors
                     SizedBox(
                       height: 25,
                     ),
                     TextField(
                         decoration: InputDecoration(
                       labelText: 'username',
+                      // ignore: duplicate_ignore
+                      // ignore: prefer_const_constructors
                       icon: Icon(Icons.person),
+                      // ignore: duplicate_ignore
+                      // ignore: prefer_const_constructors
                       enabledBorder: OutlineInputBorder(
+                        // ignore: duplicate_ignore
+                        // ignore: prefer_const_constructors
                         borderSide: BorderSide(color: Colors.blue, width: 2.0),
                       ),
+                      // ignore: duplicate_ignore
+                      // ignore: prefer_const_constructors
                       focusedBorder: OutlineInputBorder(
+                        // ignore: duplicate_ignore
+                        // ignore: prefer_const_constructors
                         borderSide: BorderSide(color: Colors.blue, width: 2.5),
                       ),
                       filled: true,
                       fillColor: Colors.white.withOpacity(0.5),
                     )),
+                    // ignore: duplicate_ignore
+                    // ignore: prefer_const_constructors
                     SizedBox(height: 20),
                     TextField(
                         decoration: InputDecoration(
                       labelText: 'Email',
+                      // ignore: duplicate_ignore
+                      // ignore: prefer_const_constructors
                       icon: Icon(Icons.email),
+                      // ignore: duplicate_ignore
+                      // ignore: prefer_const_constructors
                       enabledBorder: OutlineInputBorder(
+                        // ignore: duplicate_ignore
+                        // ignore: prefer_const_constructors
                         borderSide: BorderSide(color: Colors.blue, width: 2.0),
                       ),
+                      // ignore: duplicate_ignore
+                      // ignore: prefer_const_constructors
                       focusedBorder: OutlineInputBorder(
+                        // ignore: duplicate_ignore
+                        // ignore: prefer_const_constructors
                         borderSide: BorderSide(color: Colors.blue, width: 2.5),
                       ),
                       filled: true,
                       fillColor: Colors.white.withOpacity(0.5),
                     )),
+                    // ignore: duplicate_ignore
+                    // ignore: prefer_const_constructors
                     SizedBox(height: 20),
                     TextField(
                         decoration: InputDecoration(
                       labelText: 'Phone Number',
+                      // ignore: duplicate_ignore
+                      // ignore: prefer_const_constructors
                       icon: Icon(Icons.phone),
+                      // ignore: duplicate_ignore
+                      // ignore: prefer_const_constructors
                       enabledBorder: OutlineInputBorder(
+                        // ignore: duplicate_ignore
+                        // ignore: prefer_const_constructors
                         borderSide: BorderSide(color: Colors.blue, width: 2.0),
                       ),
+                      // ignore: duplicate_ignore
+                      // ignore: prefer_const_constructors
                       focusedBorder: OutlineInputBorder(
+                        // ignore: duplicate_ignore
+                        // ignore: prefer_const_constructors
                         borderSide: BorderSide(color: Colors.blue, width: 2.5),
                       ),
                       filled: true,
                       fillColor: Colors.white.withOpacity(0.5),
                     )),
+                    // ignore: duplicate_ignore
+                    // ignore: prefer_const_constructors
                     SizedBox(height: 20),
                     TextField(
                         decoration: InputDecoration(
                       labelText: 'Password',
+                      // ignore: duplicate_ignore
+                      // ignore: prefer_const_constructors
                       icon: Icon(Icons.lock),
+                      // ignore: duplicate_ignore
+                      // ignore: prefer_const_constructors
                       enabledBorder: OutlineInputBorder(
+                        // ignore: duplicate_ignore
+                        // ignore: prefer_const_constructors
                         borderSide: BorderSide(color: Colors.blue, width: 2.0),
                       ),
+                      // ignore: duplicate_ignore
+                      // ignore: prefer_const_constructors
                       focusedBorder: OutlineInputBorder(
+                        // ignore: duplicate_ignore
+                        // ignore: prefer_const_constructors
                         borderSide: BorderSide(color: Colors.blue, width: 2.5),
                       ),
                       filled: false,
                       fillColor: Colors.white.withOpacity(0.5),
                     )),
+                    // ignore: duplicate_ignore
+                    // ignore: prefer_const_constructors
                     SizedBox(height: 20),
                     TextField(
                         decoration: InputDecoration(
                       labelText: 'Confirm Password',
+                      // ignore: duplicate_ignore
+                      // ignore: prefer_const_constructors
                       icon: Icon(Icons.lock),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(color: Colors.blue, width: 2.0),

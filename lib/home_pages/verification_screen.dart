@@ -6,6 +6,7 @@ class VerificationScreen extends StatefulWidget {
   final String phoneNumber;
   const VerificationScreen({super.key, required this.phoneNumber});
   @override
+  // ignore: library_private_types_in_public_api
   _VerificationScreenState createState() => _VerificationScreenState();
 }
 

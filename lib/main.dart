@@ -18,10 +18,7 @@ import 'package:exam_app/home_pages/Profil_page.dart';
 import 'package:exam_app/home_pages/Log_in.dart';
 import 'package:exam_app/home_pages/Sign_up.dart';
 
-import 'package:flutter_tts/flutter_tts.dart';
-import 'package:speech_to_text/speech_to_text.dart';
 
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() {
   /*
@@ -35,6 +32,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  // ignore: prefer_const_constructors_in_immutables
   MyApp({super.key});
   /*final FlutterTts tts = FlutterTts();
   final SpeechToText speech = SpeechToText();
@@ -64,19 +62,30 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (context) => SplashScreen(),
           '/firstpage': (context) => FirstPage(),
+          // ignore: prefer_const_constructors
           '/signlog': (context) => SignLogPage(),
           '/login': (context) => LogIn(),
+          // ignore: prefer_const_constructors
           '/signup': (context) => SignUp(),
+          // ignore: prefer_const_constructors
           '/signlogpage': (context) => SignLogPage(),
+          // ignore: prefer_const_constructors
           '/profilpage': (context) => ProfilPage(),
           '/selectusertype': (context) => SelectUserTypeScreen(),
+          // ignore: prefer_const_constructors
           '/settingsscreen': (context) => SettingsScreen(),
+          // ignore: prefer_const_constructors
           '/editprofile': (context) => EditProfile(),
+          // ignore: prefer_const_constructors
           '/editicon': (context) => EditIcon(),
           '/selectionneavatr': (context) => SelectionneAvatr(),
+          // ignore: prefer_const_constructors
           '/aboutus': (context) => AboutUs(),
+          // ignore: prefer_const_constructors
           '/termsandconditions': (context) => TermsAndConditions(),
+          // ignore: prefer_const_constructors
           '/changepasswordpage': (context) => ChangePasswordPage(),
+          // ignore: prefer_const_constructors
           '/forgotpassword': (context) => ForgotPassword(),
           '/ AlphabetPage': (context) => AlphabetCour(),
         });
